@@ -20,30 +20,30 @@ function playGame (playerMove) {
 
   result = '';
 
-  if (playerMove === 'Scissors') {
-    if (computerMove === 'Rock') {
+  if (playerMove === 'scissors') {
+    if (computerMove === 'rock') {
       result = 'You lost';
-    } else if (computerMove === 'Paper') {
+    } else if (computerMove === 'paper') {
       result = 'You won';
-    } else if (computerMove === 'Scissors') {
+    } else if (computerMove === 'scissors') {
       result = 'Tie';
     }
   } 
-  else if (playerMove === 'Rock') {
-    if (computerMove === 'Rock') {
+  else if (playerMove === 'rock') {
+    if (computerMove === 'rock') {
       result = 'Tie';
-    } else if (computerMove === 'Paper') {
+    } else if (computerMove === 'paper') {
       result = 'You lost';
-    } else if (computerMove === 'Scissors') {
+    } else if (computerMove === 'scissors') {
       result = 'You won';
     } 
   } 
-  else if (playerMove === 'Paper') {
-    if (computerMove === 'Rock') {
+  else if (playerMove === 'paper') {
+    if (computerMove === 'rock') {
       result = 'You won';
-    } else if (computerMove === 'Paper') {
+    } else if (computerMove === 'paper') {
       result = 'Tie';
-    } else if (computerMove === 'Scissors') {
+    } else if (computerMove === 'scissors') {
       result = 'You lost';
     }
   }
@@ -83,15 +83,12 @@ function pickComputerMove () {
   let computerMove = '';
 
   if (randomNumber >= 0 && randomNumber < 1/3) {
-    computerMove = 'Rock';
+    computerMove = 'rock';
   } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-    computerMove = 'Paper';
+    computerMove = 'paper';
   } else if (randomNumber >= 2/3 && randomNumber < 1) {
-    computerMove = 'Scissors';
+    computerMove = 'scissors';
   }
   
   return computerMove;
-
-  console.log('this will not run, due to early return');
-  
 }
